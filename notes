@@ -1,0 +1,42 @@
+customer
+    _id
+    name - String -required
+    email - String - required - validate format
+    mobile - String -required - length -10, validate- number
+    createdAt - Date, default Date.now()
+
+department
+    _id
+    name - String -required
+    createdAt - Date, default Date.now()
+
+employee
+    _id
+    name - String -required
+    email - String - required - validate format
+    mobile - String -required - length -10, validate- number
+    department - Schema.types.ObjectId
+    createdAt - Date, default Date.now()
+
+ticket
+    _id
+    
+    message - String
+    priority - String
+    ticketCode - String
+    isCompleted - Boolean , default is false
+    customer - Schema.types.ObjectId
+    department - Schema.Types.ObjectId
+    employee - Schema.Types.ObjectId
+    createdAt - Date , default Date.now()
+    
+product 
+    _id
+    name
+    price
+    description
+
+review 
+    _id
+    body
+    rating
